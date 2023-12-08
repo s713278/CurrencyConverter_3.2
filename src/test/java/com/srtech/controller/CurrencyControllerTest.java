@@ -38,8 +38,8 @@ class CurrencyControllerTest {
 		CurrencyRequest currencyRequest = new CurrencyRequest();
 		currencyRequest.setAmount(6250d);
 		currencyRequest.setToCurrency("AUDacbs");
-		assertThrows(RuntimeException.class, () -> 
-				restTemplate.postForEntity("http://localhost:"+port+"/api/v1/currency/convert", currencyRequest, CurrencyResponse.class));
+		ResponseEntity responseEntity=  restTemplate.postForEntity("http://localhost:"+port+"/api/v1/currency/convert", currencyRequest, CurrencyResponse.class);
+		assertEquals(HttpStatus.BAD_REQUEST, responseEntity.getStatusCode());
 	}
 	
 	

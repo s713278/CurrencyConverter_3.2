@@ -20,7 +20,7 @@ public class CurrencyController {
 	private double aud_converstion_date=62.5;
 	
 	@PostMapping("/currency/convert")
-	public ResponseEntity<CurrencyResponse> convert(@RequestBody CurrencyRequest currencyRequest) throws RuntimeException{
+	public ResponseEntity<CurrencyResponse> convert(@RequestBody CurrencyRequest currencyRequest) {
 		
 		double totalValue=0;
 		
