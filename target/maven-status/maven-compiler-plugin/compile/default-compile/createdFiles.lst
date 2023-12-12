@@ -1,5 +1,0 @@
-com\srtech\exception\GlobalExceptionHAndler.class
-com\srtech\controller\CurrencyController.class
-com\srtech\dto\CurrencyRequest.class
-com\srtech\dto\CurrencyResponse.class
-com\srtech\CurrentcyConverterApplication.class
